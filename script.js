@@ -95,7 +95,7 @@ map.on('load', () => {
         }
     });
 
-    popup(map, 'bldg-extrusion')
+    popup(map, 'bldgs-extrusion')
 });
 
 //After the last frame rendered before the map enters an "idle" state.
