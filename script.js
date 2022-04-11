@@ -63,7 +63,15 @@ map.on('load', () => {
         'type': 'fill-extrusion',
         'minzoom': 15,
         'paint': {
-            'fill-extrusion-color': '#fff',
+            'fill-extrusion-color': [
+                'match', ['get', 'RiskLevel'], // get the property
+                'Low', '#fff5f0',              // group 1
+                'Moderately low', '#fcbea5',   // group 2
+                'Moderate', '#fb7050',         // group 3
+                'Moderately high', '#d32020',  // group 4
+                'High', '#b50018',             // group 5
+                '#ccc'                         // white otherwise
+            ],
                                 
             // Use an 'interpolate' expression to
             // add a smooth transition effect to
